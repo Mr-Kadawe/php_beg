@@ -185,7 +185,7 @@
 
         echo $cars[2] . " and " . $cars[3] . " From America" ;
         
-        echo"<br><br>", $cars[4].",".$cars[0]." and ".$cars[1]." are Swidish cars";
+        echo"<br><br>", $cars[4].",".$cars[0]." and ".$cars[1]." are Swedish cars";
 
         echo " <br> <br> --- Associative array ---- <br>";
 
