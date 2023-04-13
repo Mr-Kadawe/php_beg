@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Course</title>
 </head>
-<body>    
+
+<body>
     <h1>Welcome Php Courses </h1>
     <?php
 
@@ -113,7 +115,7 @@
         }else{
             echo  "<br> $date Is equal to Sat";
         }
-        // <> IS Not Equal 
+        // < > IS Not Equal 
 
         if($date <> 'Sun'){
             echo "<br> $date Is not equal Sun";
@@ -127,15 +129,79 @@
 
         if($avg > 100 && $avg < 0){
             echo  "Invalid Grade ";
-        }elseif ($avg <= 100 && $avg > 95) {
+        }else if ($avg <= 100 && $avg > 95) {
            echo "Your Grade A+";
         }else if($avg <= 95 && $avg > 85){
             echo "Your Grade A-";
-        }else  if($avg < 50){
+        }else if($avg < 50){
             echo "Failed";        
         }else{
             echo "Not Found ";
         }
+
+
+        // 13/04/2023
+
+        // conditional Statement Switch
+        echo "<br><br> ---- Switch <br>";
+        $x = 1;
+
+        switch($x)
+        {
+            case 1:
+                echo  " case one  Value $x";
+                break;
+            case 2:
+                echo "case two  Value $x";
+                break;
+            case 3:
+                echo "case three  Value $x";
+                break;
+            default:
+                echo "Not Found data";
+                break;
+              
+            }
+            
+            // Php Array(Numeric array , Associative array  . Multidimensional array )
+            
+            
+            echo "<br> <br> ---Arrays <br>";
+        echo " <br> --- Numeric array ---- <br>";
+        $cars = array("Saab","Volvo","BMW","TOYOTA", 654);
+        //  echo $cars;     //return error Array to Convertion string Not work
+        var_dump($cars);     // return Correct Result ( More Description )
+
+        
+        echo"<br>".$cars[0];
+        echo "<br>";
+        var_dump($cars[1]);
+
+        $cars = ['Saab','Volvo','BMW','TOYOTA',"Mercedes"];
+
+        echo "<br> <br>--- <br>";
+        var_dump($cars);
+        echo "<br>";
+
+        echo $cars[2] . " and " . $cars[3] . " From America" ;
+        
+        echo"<br><br>", $cars[4].",".$cars[0]." and ".$cars[1]." are Swidish cars";
+
+        echo " <br> <br> --- Associative array ---- <br>";
+
+        
+        // $ages = array();
+
+        $ages = ["Mohamed"=>23, "Farah"=>34, "Abdulle"=> 33];
+        var_dump($ages);
+
+        echo "<br>";
+        
+        // echo $ages[0];   // return Undefined array key 0 ( Beacuse Use Associative array Not Use Numeric array)
+        
+        echo  $ages['Mohamed']; // return age 
+
+        echo "<br> Mohamed is ". $ages['Mohamed'] . " Years old.";
 
 
 
@@ -157,4 +223,5 @@
  ?>
 
 </body>
+
 </html>
