@@ -167,9 +167,11 @@
             
             
             echo "<br> <br> ---Arrays <br>";
+
         echo " <br> --- Numeric array ---- <br>";
+
         $cars = array("Saab","Volvo","BMW","TOYOTA", 654);
-        //  echo $cars;     //return error Array to Convertion string Not work
+        // echo $cars;     //return error Array to Convertion string Not work
         var_dump($cars);     // return Correct Result ( More Description )
 
         
@@ -202,6 +204,130 @@
         echo  $ages['Mohamed']; // return age 
 
         echo "<br> Mohamed is ". $ages['Mohamed'] . " Years old.";
+
+
+
+    // 14/04/2023
+
+
+    // Multidimentional Array ( One Dimentional Array , Two  Dimentional Array and Three Dimentional Array);
+
+    echo "<br> <br> One Dimentional Array <br>";
+    $cars = ['MERCEDES','TOTYOTA','VOLVO'];
+    // echo  $cars;
+    echo $cars[0] ,",". $cars[1] . " and ". $cars[2];
+
+
+     echo "<br> <br> Two Dimentional Array <br>";
+
+
+     $names = array(array('Ali',"Abdullahi", 'Mahad','Abdulle', "Guutaale") );
+
+    //  echo $names[0];
+   
+    //  var_dump($names);
+
+    echo $names[0][0];
+    echo "<br>".$names[0][1];
+    echo "<br>". $names[0][2];
+
+      echo "<br>";
+
+
+      $names = [
+        [
+            "Farah",
+            "Mohamed",
+            "Xaliima",
+            "Ibraahim",
+        
+        ],
+
+        [
+            "Seynab",
+            'Umu Kaltuum',
+            "Faaduma",
+            "Abdullahi"
+        ]
+        ];
+
+
+        echo "<br>". $names[0][3];
+        echo "<br>". $names[1][0];
+        echo "<br>". $names[1][3];
+
+
+        echo "<br> <br> Three Dimentional Array <br> ";
+
+        $names = array(
+                array(
+                    array(
+                        "Abdiyo",
+                        "Farhiyo",
+                        "Xaliima",
+                        "Sacdia",
+                        675,
+                    ),
+                    array(
+
+                    )
+                )
+            );
+
+        // var_dump($names);
+
+        echo  $names[0][0][0];
+        echo "<br>". $names[0][0][1];
+        echo "<br>". $names[0][0][2];
+        echo "<br>". $names[0][0][3];
+        echo "<br>". $names[0][0][4];
+
+
+        echo "<br> .............. <br>";
+        
+        $names = array(
+            array(
+                array(
+                    "Ali",
+                    "Mahad",
+                    "Abdullahi"
+                ),
+                array(
+                    "Faadumo",
+                    'Xaliima',
+                    "Ikraan",
+                ),
+            ),
+
+            array(
+                array(
+                    "MARYAMO",
+                    "JAMIILO",
+                    'XAMDI'
+                ),
+                array(
+                    "ABDIRAHMAAN",
+                    "LIIBAN",
+                    'BASHIIR'
+                ),
+            ),
+        );
+
+        ECHO "<br>". $names[0][0][0];
+        ECHO "<br>". $names[0][0][1];
+        ECHO "<br>". $names[0][0][2];
+        echo "<br>". $names[0][1][2];
+
+        echo "<br> ........... <br> ";
+
+        echo "<br>". $names[1][0][1];
+
+        echo "<br>". $names[1][1][0];
+        echo "<br>". $names[1][1][1];
+        echo "<br>". $names[1][1][2];
+
+
+
 
 
 
