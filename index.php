@@ -8,7 +8,7 @@
     <title>PHP Course</title>
 </head>
 
-<body>
+<body style="background-color: #004; color:white">
     <h1>Welcome Php Courses </h1>
     <?php
 
@@ -327,21 +327,88 @@
         echo "<br>". $names[1][1][2];
 
 
+        //4/27/2023
+        echo  "Array Functions ";
+        $colors = array('Blue','Red','Green','Yellow');
+
+        echo "<br>";
+        print_r($colors);
+        echo "<br><br> array_pop<br>";
+        print_r(array_pop($colors));
+
+        echo "<br><br>";
+        print_r($colors);
+
+        echo "<br><br>array_push<br>";
+
+        print_r(array_push($colors,"White","Black"));
+
+        echo "<br><br>";
+        print_r($colors);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+        echo  "<br><br>array_shift<br>";
+        print_r(array_shift($colors));
         
+        echo  "<br><br> array_unshift <br>";
+
+        print_r(array_unshift($colors,"Yellow","Purple"));
+
+
+        echo "<br><br>";
+        print_r($colors);
+
+        $cars = ['Toyota','Mercedes','BMW','Volvo','V8',"Bajaaj"];
+        echo "<br><br> array_replace <br>";
+
+        print_r(array_replace($colors,$cars));
+
+        echo "<br><br>";
+        print_r($colors);
+
+
+        echo "<br><br> array_reverse <br>";
+
+        print_r(array_reverse($colors));
+
+
+
+        echo "<br><br> sort () <br> ";
+
+        print_r(sort($colors));
+        echo "<br><br>";
+        print_r($colors);
+
+        echo "<br><br> usort () <br> ";
+
+        // print_r(usort($colors,"sort"));
+        // echo "<br><br>";
+        // print_r($colors);
+
+        echo "<br><br> array_slice <br>";
+        print_r(array_slice($colors,4));
+
+        echo "<br><br> array_splice <br>";
+        print_r(array_splice($colors,0,3,"Cyan"));
+
+        echo "<br><br>";
+        print_r($colors);
+
+        echo "<br><br>";
+        print_r("Sizeof () :".sizeof($colors));
+
+        echo "<br><br>";
+        print_r("Count () : ".count($colors));
+
+         echo "<br><br>";
+        $a = array(23,17,33);
+        print_r(" Array_sum() : ".array_sum($a))
+
+
+
+
+
+
         // echo "<h1> Tijaabo</h1>";            
         // echo ("<h1> Tijaabo One</h1>");            
 

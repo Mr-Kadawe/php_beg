@@ -1,0 +1,26 @@
+array_pop()	Deletes the last element of an Array
+array_push()	Inserts one or more elements to the end of an array
+
+array_shift()	Removes the first element from an array, and returns the value of the removed element
+array_unshift()	Adds one or more elements to the beginning of an array
+
+array_replace()	Replaces the values of the first array with the values from following arrays
+ 
+array_reverse()	Returns an array in the reverse order
+ 
+
+sort()	Sorts an indexed array in ascending order
+usort()
+
+array_slice()	Returns selected parts of an array
+
+array_splice()	Removes and replaces specified elements of an array
+
+sizeof() function returns the number of elements in an array.
+ 
+count()	Returns the number of elements in an array
+
+array_sum()	Returns the sum of the values in an array
+
+
+array_rand()	Returns one or more random keys from an array
