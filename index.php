@@ -402,8 +402,69 @@
 
          echo "<br><br>";
         $a = array(23,17,33);
-        print_r(" Array_sum() : ".array_sum($a))
+        print_r(" Array_sum() : ".array_sum($a));
 
+
+
+        // 04/28/2023 Loops
+
+        // while loop
+
+        echo  "<br><br> While Loop <br>";
+        $i = 1;
+        while ($i <= 10) {
+           echo "<br> Number is ".$i; //this way good "------ ".$i
+           $i++;
+        }
+
+        echo  "<br><br> Do-while Loop <br>";
+        $i = 1;
+        do{
+            echo "<br> Number is $i"; // this way normal "..... $i"
+            $i++;
+        }while($i <= 15);
+
+        // .... 
+        echo  "<br><br> Do-while Loop <br>";
+        $i = 1;
+        do{
+            $i++;
+            echo "<br> Number is $i"; // this way normal "..... $i"
+        }while($i <= 15);
+
+
+
+        // For Loop
+
+        echo  "<br><br> For Loop <br>";
+
+        for($i = 0; $i <= 20 ;  $i++){
+            echo "<br> Number is ".$i;
+        }
+
+        echo  "<br><br> For Loop ( Array ) <br>";
+
+        $names = ['Abdullahi','Ali','Mahad','Sahal','Farah','Geedi','Raage','Warsame'];
+        for($i = 0; $i < count($names); $i++){
+            echo  "<br> Array of Names is : [$i] ".$names[$i];
+        }
+
+
+        echo  "<br><br> ForEach <br>";
+
+        foreach ($names as $key => $value) {
+           echo "<br> Array Names is : [$key] ".$value;
+        }
+
+
+        // PHP Functions
+        echo  "<br><br> Php Functions <br>";
+        function writeName(){
+            echo "Abdi Ali Farah";
+        }
+       
+        echo "<br> My Name Is : ";
+        writeName();
 
 
 
