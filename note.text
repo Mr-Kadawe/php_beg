@@ -23,4 +23,18 @@ count()	Returns the number of elements in an array
 array_sum()	Returns the sum of the values in an array
 
 
-array_rand()	Returns one or more random keys from an array
+array_rand() Returns one or more random keys from an array
+
+
+
+The PHP superglobal variables are:
+
+$GLOBALS
+$_SERVER
+$_REQUEST
+$_POST
+$_GET
+$_FILES
+$_ENV
+$_COOKIE
+$_SESSION
