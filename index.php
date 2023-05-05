@@ -25,7 +25,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row ">
                     <form action="" method="POST">
                     <div class="row">
                         <div class="col-md-6">
@@ -41,7 +41,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Email</label>
@@ -57,7 +57,7 @@
                         </div>
                        
                     </div>
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Address</label>
@@ -85,7 +85,11 @@
                         </div>
                        
                     </div>
-
+                    <div class="float-end mt-3">
+                            <button id="submit" type="submit" class="btn btn-success  submit">Submit</button>
+                            <button id="reset" type="reset" class="btn btn-danger reset">Reset</button>
+                         
+                    </div>
                     </form>
                 </div>
             </div>
