@@ -136,36 +136,33 @@ if(!$conn->connect_error){
                 </div>
 
                 <table class="table table-dark table-bordered border-primary">
-                    <tr>
-                        <th>#</th>
-                        <th>Full Name</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-                        <th>Password</th>
-                        <th>Address</th>
-                        <th>Date</th>
-                        <th>Country</th>
-                        <th>Action</th>
-                    </tr>
+                    <th>#</th>
+                    <th>Full Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Address</th>
+                    <th>Date</th>
+                    <th>Country</th>
+                    <th>Action</th>
                     <tbody>
-                        <?php foreach($read_data as $key=>$value){ ?>
+                        <?php foreach($read_data as $key=>$value){?>
                         <tr>
-                            <td><?php echo $value['id']?></td>
-                            <td><?php echo $value['name']?></td>
-                            <td><?php echo  $value['phone']?></td>
-                            <td><?php echo  $value['email']?></td>
-                            <td><?php echo  $value['password']?></td>
-                            <td><?php echo  $value['address']?></td>
-                            <td><?php echo  $value['date']?></td>
-                            <td><?php echo  $value['country']?></td>
-                            <td>
-                                <button type="button" data-toggle="modal"
+                           <td><?php echo $value['id']?></td>
+                           <td><?php echo $value['name']?></td>
+                           <td><?php echo $value['phone']?></td>
+                           <td><?php echo $value['email']?></td>
+                           <td><?php echo $value['password']?></td>
+                           <td><?php echo $value['address']?></td>
+                           <td><?php echo $value['date']?></td>
+                           <td><?php echo $value['country']?></td>
+                           <td>
+                           <button type="button" data-toggle="modal"
                                     data-target="#editModal<?php echo $value['id']?>"
                                     class="btn btn-success">Edit</button>
                                 <button type="button" class="btn btn-danger" data-toggle="modal"
                                     data-target="#deleteModal<?php echo  $value['id']?>">Delete </button>
-                            </td>
-
+                           </td>
                         </tr>
                         <?php }?>
                     </tbody>
@@ -214,7 +211,7 @@ if(!$conn->connect_error){
                 </div>
                 <div class="modal-body">
                     <form action="" method="post">
-                        <input type="text" id="update_id" name="update_id" value="<?php echo $row['id']?>">
+                        <input type="hidden" id="update_id" name="update_id" value="<?php echo $row['id']?>">
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="">Full Name</label>
@@ -240,7 +237,7 @@ if(!$conn->connect_error){
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="">Date</label>
-                                <input type="text" name="date" id="date" class="form-control"
+                                <input type="date" name="date" id="date" class="form-control"
                                     value="<?php echo  $row['date']?>">
                             </div>
                             <div class="col-md-6">
@@ -259,7 +256,7 @@ if(!$conn->connect_error){
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" name="delete" class="btn btn-success">Yes! Update It</button>
+                    <button type="submit" name="update" class="btn btn-success">Yes! Update It</button>
                 </div>
                 </form>
             </div>
@@ -304,6 +301,29 @@ if(!$conn->connect_error){
             }
         }
      
+        // Updated Data to mysql database
+        if(isset($_POST['update']))
+        {
+            $update_id = mysqli_real_escape_string($conn,$_POST['update_id']);
+
+            $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
+            $phone  = mysqli_real_escape_string($conn, $_POST['phone']);
+            $email = mysqli_real_escape_string($conn, $_POST['email']);
+            $address = mysqli_real_escape_string($conn, $_POST['address']);
+            $date = mysqli_real_escape_string($conn, $_POST['date']);
+            $country = mysqli_real_escape_string($conn, $_POST['country']);
+            $update_date = date('Y-m-d h:i:s A');
+            // echo $date;
+            $update_qry = "UPDATE crud_table SET name = '$fullname', phone ='$phone', email = '$email', address ='$address', date = '$date', country = '$country', updated_at ='$update_date' WHERE id = '$update_id'";
+            $update = mysqli_query($conn, $update_qry);
+            if($update){
+                echo  '<script>alert("Updated Successfully")</script>';
+                echo  '<script>window.location.href="index.php"</script>';
+            }else{
+                echo  "<script>alert('Not Updated')</script>";
+            }
+
+        }
      ?>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script> -->
